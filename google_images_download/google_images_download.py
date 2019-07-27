@@ -536,7 +536,7 @@ class googleimagesdownload:
                     if save_source:
                         list_path = main_directory + "/" + save_source + ".txt"
                         list_file = open(list_path,'a')
-                        list_file.write(path + '\t' + img_src + '\n')
+                        list_file.write(path + '\t' + image_url + '\n')
                         list_file.close()
                 except OSError as e:
                     download_status = 'fail'
@@ -642,7 +642,7 @@ class googleimagesdownload:
                     if save_source:
                         list_path = main_directory + "/" + save_source + ".txt"
                         list_file = open(list_path,'a')
-                        list_file.write(path + '\t' + img_src + '\n')
+                        list_file.write(path + '\t' + image_url + '\n')
                         list_file.close()
                     absolute_path = os.path.abspath(path)
                 except OSError as e:
