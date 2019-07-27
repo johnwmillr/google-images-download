@@ -602,6 +602,8 @@ class googleimagesdownload:
 
                 extensions = [".jpg", ".jpeg", ".gif", ".png", ".bmp", ".svg", ".webp", ".ico"]
                 # keep everything after the last '/'
+                print("YOO!!!!")
+                print(image_url)
                 image_name = str(image_url[(image_url.rfind('/')) + 1:])
                 if format:
                     if not image_format or image_format != format:
@@ -670,7 +672,7 @@ class googleimagesdownload:
                 download_message = "URLError on an image...trying next one..." + " Error: " + str(e)
                 return_image_name = ''
                 absolute_path = ''
-                
+
             except BadStatusLine as e:
                 download_status = 'fail'
                 download_message = "BadStatusLine on an image...trying next one..." + " Error: " + str(e)
