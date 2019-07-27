@@ -602,8 +602,6 @@ class googleimagesdownload:
 
                 extensions = [".jpg", ".jpeg", ".gif", ".png", ".bmp", ".svg", ".webp", ".ico"]
                 # keep everything after the last '/'
-                print("YOO!!!!")
-                print(image_url)
                 image_name = str(image_url[(image_url.rfind('/')) + 1:])
                 if format:
                     if not image_format or image_format != format:
@@ -642,7 +640,7 @@ class googleimagesdownload:
                     if save_source:
                         list_path = main_directory + "/" + save_source + ".txt"
                         list_file = open(list_path,'a')
-                        list_file.write(path + '\t' + image_url + '\n')
+                        list_file.write((path + '\t' + image_url + '\n')).replace("//", "/")
                         list_file.close()
                     absolute_path = os.path.abspath(path)
                 except OSError as e:
